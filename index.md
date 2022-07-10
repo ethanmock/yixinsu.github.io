@@ -13,6 +13,19 @@
 6. Changliang Li, Yixin Su, Wenju Liu, **Text-To-Text Generative Adversarial Networks.** _International Joint Conference on Neural Networks (IJCNN) 2018._
 7. **Yixin Su**, Sheng-Uei Guan, **Density and Distance Based KNN Approach to Classification.** _International Journal of Applied Evolutionary Computation (IJAEC) 2016._
 
+## Education
+
+- **University of Melbourne**
+Ph.D. in Computer Science           _Aug 2018 - now, Melbourne, Australia_
+
+- **University of Melbourne**
+Master in Computer Science           _Feb 2016 - Dec 2017, Melbourne, Australia_
+
+- **Xi'an Jiaotong Liverpool University**    _Sep 2011 - July 2015, Suzhou, China_
+
+
+## Experiences
+
 
 
 
