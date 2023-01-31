@@ -23,10 +23,5 @@
   - Master in Computer Science             
   - _Feb 2016 - Dec 2017, Melbourne, Australia_
 
-- **Xi'an Jiaotong Liverpool University**   
-  - Bachelor in Infomation and Computing Science   
-  - _Sep 2011 - July 2015, Suzhou, China_
-
-
 
 
