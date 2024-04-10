@@ -1,5 +1,5 @@
 # Yixin Su
-- Received Ph.D. degrees from the School of Computing and Information Systems at The University of Melbourne
+- Received Ph.D. degree from the School of Computing and Information Systems at The University of Melbourne
 - Email: yixin DOT su AT  outlook DOT com
 - My research interests include recommender systems, feature interactions, graph neural networks.
 
@@ -20,11 +20,15 @@
 
 - **University of Melbourne**
   - Ph.D. in Computer Science              
-  - _Aug 2018 - now, Melbourne, Australia_
+  - _Aug 2018 - Oct 2022, Melbourne, Australia_
 
 - **University of Melbourne**
   - Master in Computer Science             
   - _Feb 2016 - Dec 2017, Melbourne, Australia_
+
+- **Xi’an Jiaotong-Liverpool University**
+  - Bachelor in Information and Computing Science     
+  - _Sep 2011 - Jun 2015, Suzhou, China_
 
 
 
