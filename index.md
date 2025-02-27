@@ -1,20 +1,24 @@
 # Yixin Su
 - Received Ph.D. degree from the School of Computing and Information Systems at The University of Melbourne
 - Email: yixin DOT su AT  outlook DOT com
-- My research interests include recommender systems, feature interactions, graph neural networks.
+- My research interests include recommender systems, feature interactions, graph neural networks, personalized large language models, etc.
 
 ## Publications
 
-1. Rui Zhang, **Yixin Su**, Bayu Distiawan Trisedya, Xiaoyan Zhao, Min Yang, Hong Cheng, Jianzhong Qi, **AutoAlign: Fully Automatic and Effective Knowledge Graph Alignment enabled by Large Language Models**. _IEEE Transactions on Knowledge and Data Engineering (TKDE) 2023_.
-2. Yunxiang Zhao, Jianzhong Qi, Bayu D Trisedya, **Yixin Su**, Rui Zhang, Hongguang Ren, **Learning Region Similarities via Graph-based Deep Metric Learning**. _IEEE Transactions on Knowledge and Data Engineering (TKDE) 2023_.
-3. **Yixin Su**, Yunxiang Zhao, Sarah Erfani, Junhao Gan, Rui Zhang, **Detecting Arbitrary Order Beneficial Feature Interactions for Recommender Systems**. _Conference on Knowledge Discovery and Data Mining (SIGKDD) 2022_. [paper](https://arxiv.org/abs/2206.13764) [code](https://github.com/ruizhang-ai/HIRS_Hypergraph_Infomax_Recommender_System)
-4. Ziqiang Cui, **Yixin Su**, Fangquan Lin, Cheng Yang, Hanwei Zhang, Jihai, Zhang, **Dual Disentangled Attention for Multi-Information Utilization in Sequential Recommendation**. _International Joint Conference on Neural Networks (IJCNN) 2022_.
-5. **Yixin Su**, Rui Zhang, Sarah Erfani, Junhao Gan, **Neural Graph Matching based Collaborative Filtering**. _International Conference on Research and Development in Information Retrieval (SIGIR) 2021_. [paper](https://arxiv.org/abs/2105.04067) [code](https://github.com/ruizhang-ai/GMCF_Neural_Graph_Matching_based_Collaborative_Filtering)
-6. **Yixin Su**, Rui Zhang, Sarah Erfani, Zhenghua Xu, **Detecting Beneficial Feature Interactions for Recommender Systems**. _The Conference on Artificial Intelligence (AAAI) 2021._ [paper](https://arxiv.org/abs/2008.00404) [code](https://github.com/ruizhang-ai/SIGN-Detecting-Beneficial-Feature-Interactions-for-Recommender-Systems)
-7. **Yixin Su**, Sarah Erfani, Rui Zhang, **MMF: Attribute Interpretable Collaborative Filtering**. _International Joint Conference on Neural Networks (IJCNN) 2019._ [paper](https://arxiv.org/abs/1908.01099)
-8. Changliang Li, **Yixin Su**, Ji Qi, Min Xiao, **Using GAN to Generate Sport News from Live Game Stats**. _International Conference on Cognitive Computing (ICCC) 2019._
-9. Changliang Li, **Yixin Su**, Wenju Liu, **Text-To-Text Generative Adversarial Networks.** _International Joint Conference on Neural Networks (IJCNN) 2018._
-10. **Yixin Su**, Sheng-Uei Guan, **Density and Distance Based KNN Approach to Classification.** _International Journal of Applied Evolutionary Computation (IJAEC) 2016._
+1. **Yixin Su**#, Wei Jiang#, Fangquan Lin, Cheng Yang, Sarah Erfani, Junhao Gan, Yunxiang Zhao*, Ruixuan Li, Rui Zhang*, IEDR: A Context-aware Intrinsic and Extrinsic Disentangled Recommender System. _IEEE Transactions on Information Systems (TOIS) 2025_ (**Minor Revision, CCF-A**)
+2. Yunxiang Zhao#, Jijun Yu#, **Yixin Su**#, You Shu#, Enhao Ma#, Jing Wang, Shuyang Jiang, Congwen Wei, Dongsheng Li, Zhen Huang*, Gong Cheng*, Hongguang Ren*, Jiannan Feng*, A unified deep framework for peptide–major histocompatibility complex–T cell receptor binding prediction. _Nature Machine Intelligence (NMI) 2025_ (**Co-first Author, SCI-Q1, IF: 26.4**)
+3. Yuchao Ma, Ruohan Qian, Bingzhe Wang, Qi Qi, Wenqiang liu, Qian Tang, Zhao Shen, Wei Zhong, Bo Shen, **Yixin Su**, Bin Zou, Wen Yi, Zhi Guo, shuanglong li, Liu Lin, GenAuction: A Generative Auction for Online Advertising. _Annual AAAI Conference on Artificial Intelligence (AAAI) 2025_ (**CCF-A**)
+4. Rui Zhang#, **Yixin Su**#*, Bayu Distiawan Trisedya, Xiaoyan Zhao, Min Yang, Hong Cheng, Jianzhong Qi, AutoAlign: Fully Automatic and Effective Knowledge Graph Alignment enabled by Large Language Models. _IEEE Transactions on Knowledge and Data Engineering (TKDE) 2024_. (**Co-first Author, Corresponding Author, CCF-A**)
+5. Xinxin Su; Zhen Huang; **Yixin Su**; Bayu Distiawan Trisedya; Yong Dou; Yunxiang Zhao, Hierarchical Shared Encoder With Task-Specific Transformer Layer Selection for Emotion-Cause Pair Extraction, _IEEE Transactions on Affective Computing (TAC)_ (**CCF-B**)
+6. Yunxiang Zhao, Jianzhong Qi, Bayu D Trisedya, **Yixin Su**, Rui Zhang, Hongguang Re*n, Learning Region Similarities via Graph-based Deep Metric Learning. _IEEE Transactions on Knowledge and Data Engineering (TKDE) 2023_. (**CCF-A**)
+7. **Yixin Su**, Yunxiang Zhao, Sarah Erfani*, Junhao Gan, Rui Zhang*, Detecting Arbitrary Order Beneficial Feature Interactions for Recommender Systems. _Conference on Knowledge Discovery and Data Mining (SIGKDD) 2022_. [paper](https://arxiv.org/abs/2206.13764) [code](https://github.com/ruizhang-ai/HIRS_Hypergraph_Infomax_Recommender_System) (**CCF-A**)
+8. Ziqiang Cui#, **Yixin Su**#, Fangquan Lin, Cheng Yang, Hanwei Zhang, Jihai, Zhang, Dual Disentangled Attention for Multi-Information Utilization in Sequential Recommendation. _International Joint Conference on Neural Networks (IJCNN) 2022_. (**Co-first Author**)
+9. **Yixin Su**, Rui Zhang, Sarah Erfani, Junhao Gan, Neural Graph Matching based Collaborative Filtering. _International Conference on Research and Development in Information Retrieval (SIGIR) 2021_. [paper](https://arxiv.org/abs/2105.04067) [code](https://github.com/ruizhang-ai/GMCF_Neural_Graph_Matching_based_Collaborative_Filtering) (**CCF-A**)
+10. **Yixin Su**, Rui Zhang, Sarah Erfani*, Zhenghua Xu*, Detecting Beneficial Feature Interactions for Recommender Systems. _The Conference on Artificial Intelligence (AAAI) 2021._ [paper](https://arxiv.org/abs/2008.00404) [code](https://github.com/ruizhang-ai/SIGN-Detecting-Beneficial-Feature-Interactions-for-Recommender-Systems) (**CCF-A**)
+11. **Yixin Su**, Sarah Erfani, Rui Zhang*, MMF: Attribute Interpretable Collaborative Filtering. _International Joint Conference on Neural Networks (IJCNN) 2019._ [paper](https://arxiv.org/abs/1908.01099)
+12. Changliang Li, **Yixin Su**, Ji Qi, Min Xiao, Using GAN to Generate Sport News from Live Game Stats. _International Conference on Cognitive Computing (ICCC) 2019._
+13. Changliang Li, **Yixin Su**, Wenju Liu, Text-To-Text Generative Adversarial Networks. _International Joint Conference on Neural Networks (IJCNN) 2018._
+14. **Yixin Su**, Sheng-Uei Guan, Density and Distance Based KNN Approach to Classification. _International Journal of Applied Evolutionary Computation (IJAEC) 2016._
 
 ## Education
 
@@ -23,11 +27,11 @@
   - _Aug 2018 - Oct 2022, Melbourne, Australia_
 
 - **University of Melbourne**
-  - Master in Computer Science             
+  - Master in Computer Science (First-Class Degree)             
   - _Feb 2016 - Dec 2017, Melbourne, Australia_
 
 - **Xi’an Jiaotong-Liverpool University**
-  - Bachelor in Information and Computing Science     
+  - Bachelor in Information and Computing Science (First-Class Degree)    
   - _Sep 2011 - Jun 2015, Suzhou, China_
 
 
