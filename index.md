@@ -5,11 +5,10 @@
 
 ## News
 
-- [2025.03] We have one paper (_first author_) accpected by IEEE Transactions on Information Systems (CCF-A)!
-
-- [2025.02] We have one paper (_co-first author_) published on Nature Machine Intelligence (SCI-Q1, IF: 26.4)! [paper&code](https://www.nature.com/articles/s42256-025-01002-0)
-
-- [2024.06] We have one paper (_co-first author, corresponding author_) published on IEEE Transactions on Knowledge and Data Engineering (CCF-A)! [paper](https://arxiv.org/pdf/2307.11772) [code](https://github.com/ruizhang-ai/AutoAlign)
+- [2025.03] We have one paper accpected by IEEE Transactions on Information Systems (CCF-A)!
+- [2025.02] We have one paper published on Nature Machine Intelligence (SCI-Q1, IF: 26.4)! [paper&code](https://www.nature.com/articles/s42256-025-01002-0)
+- [2024.12] We have one paper accepted by 2025 Annual AAAI Conference on Artificial Intelligence (CCF-A)!
+- [2024.06] We have one paper published on IEEE Transactions on Knowledge and Data Engineering (CCF-A)! [paper](https://arxiv.org/pdf/2307.11772) [code](https://github.com/ruizhang-ai/AutoAlign)
 
 ## Publications
 
