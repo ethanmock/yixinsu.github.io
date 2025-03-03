@@ -30,7 +30,7 @@
 ## Education
 
 - **University of Melbourne**
-  - Ph.D. in Computer Science              
+  - Ph.D. in Computer Science (Ph.D. thesis: [Explicit Feature Interaction Modeling for Recommender Systems](https://minerva-access.unimelb.edu.au/items/ccad200a-713c-48c8-ba2e-7fe1f513d4f2))             
   - _Aug 2018 - Oct 2022, Melbourne, Australia_
 
 - **University of Melbourne**
