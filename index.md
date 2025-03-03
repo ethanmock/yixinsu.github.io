@@ -3,6 +3,14 @@
 - Email: yixin DOT su AT  outlook DOT com
 - My research interests include recommender systems, feature interactions, graph neural networks, personalized large language models, etc.
 
+## News
+
+- [2025.03] We have one paper (_first author_) accpected by IEEE Transactions on Information Systems (CCF-A)!
+
+- [2025.02] We have one paper (_co-first author_) published on Nature Machine Intelligence (SCI-Q1, IF: 26.4)! [paper&code](https://www.nature.com/articles/s42256-025-01002-0)
+
+- [2024.06] We have one paper (_co-first author, corresponding author_) published on IEEE Transactions on Knowledge and Data Engineering (CCF-A)! [paper](https://arxiv.org/pdf/2307.11772) [code](https://github.com/ruizhang-ai/AutoAlign)
+
 ## Publications
 
 1. **Yixin Su**#, Wei Jiang#, Fangquan Lin, Cheng Yang, Sarah Erfani, Junhao Gan, Yunxiang Zhao*, Ruixuan Li, Rui Zhang*, IEDR: A Context-aware Intrinsic and Extrinsic Disentangled Recommender System. _IEEE Transactions on Information Systems (TOIS) 2025_ (**CCF-A**)
