@@ -13,7 +13,7 @@
 
 ## Publications 
 _(#=co-first authors, *=corresponding authors)_
-1. Ziwen Zhao#, **Yixin Su**#, Yuhua Li*，Yixiong Zou, Ruixuan Li, and Rui Zhang*，A Survey on Self-Supervised Graph Foundation Models: Knowledge-Based Perspective. _IEEE Transactions on Knowledge and Data Engineering (TKDE) 2025_
+1. Ziwen Zhao#, **Yixin Su**#, Yuhua Li*，Yixiong Zou, Ruixuan Li, and Rui Zhang*，A Survey on Self-Supervised Graph Foundation Models: Knowledge-Based Perspective. _IEEE Transactions on Knowledge and Data Engineering (TKDE) 2025_ (**CCF-A**)
 2. **Yixin Su**#, Wei Jiang#, Fangquan Lin, Cheng Yang, Sarah Erfani, Junhao Gan, Yunxiang Zhao*, Ruixuan Li, Rui Zhang*, IEDR: A Context-aware Intrinsic and Extrinsic Disentangled Recommender System. _IEEE Transactions on Information Systems (TOIS) 2025_ (**CCF-A**)
 3. Yunxiang Zhao#, Jijun Yu#, **Yixin Su**#, You Shu#, Enhao Ma#, Jing Wang, Shuyang Jiang, Congwen Wei, Dongsheng Li, Zhen Huang*, Gong Cheng*, Hongguang Ren*, Jiannan Feng*, A unified deep framework for peptide–major histocompatibility complex–T cell receptor binding prediction. _Nature Machine Intelligence (NMI) 2025_ [paper&code](https://www.nature.com/articles/s42256-025-01002-0) (**Co-first Author, SCI-Q1, IF: 26.4**)
 4. Yuchao Ma, Ruohan Qian, Bingzhe Wang, Qi Qi, Wenqiang liu, Qian Tang, Zhao Shen, Wei Zhong, Bo Shen, **Yixin Su**, Bin Zou, Wen Yi, Zhi Guo, shuanglong li, Liu Lin, GenAuction: A Generative Auction for Online Advertising. _Annual AAAI Conference on Artificial Intelligence (AAAI) 2025_ (**CCF-A**)
