@@ -1,7 +1,9 @@
 # Yixin (Ethan) Su
-- Received Ph.D. degree from the School of Computing and Information Systems at The University of Melbourne
-- Email: yixin DOT su AT  outlook DOT com
-- My research interests include recommender systems, feature interactions, graph neural networks, personalized large language models, etc.
+
+- Associate Professor at the School of Computer Science and Technology, Huazhong University of Science and Technology  
+- Previously worked at Baidu and PayPal on large-scale advertising systems and foundation model research
+- Research interests: personalized large language models, recommender systems, feature interactions, and graph neural networks  
+- Email: suyixin AT hust DOT edu DOT cn
 
 ## News
 
