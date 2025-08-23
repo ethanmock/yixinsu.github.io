@@ -8,7 +8,7 @@
 ## News
 - [2025.08] We have one paper accpected by Cell Reports (SCI-Q1, IF:8.1)!
 - [2025.05] We have one survey paper accpected by IEEE Transactions on Knowledge and Data Engineering (CCF-A)!
-- [2025.03] We have one paper accpected by IEEE Transactions on Information Systems (CCF-A)!
+- [2025.03] We have one paper accpected by ACM Transactions on Information Systems (CCF-A)!
 - [2025.02] We have one paper accpected by Nature Machine Intelligence (SCI-Q1, IF: 26.4)! [paper&code](https://www.nature.com/articles/s42256-025-01002-0)
 - [2024.12] We have one paper accpected by 2025 Annual AAAI Conference on Artificial Intelligence (CCF-A)!
 
@@ -16,7 +16,7 @@
 _(#=co-first authors, *=corresponding authors)_
 1. Yunxiang Zhao#, Qian Li#, Mingyue Sun#, **Yixin Su**#, Xinxin Su#, Ling Jiang, Xinran Zhang, Yangyi Hu, Boqian Wang, Haoran Yu, Qiang Zhang, Zili Chai, Yutao Dou, Ding Yao, Wenhua Huang, Yuhao Ren, Yuan Jin, Dongsheng Li, Zhen Huang, Peng Liu, Hongguang Ren, Yongqiang Jiang, EBAMP: an Efficient De Novo Broad-Spectrum Antimicrobial Peptides Discovery Framework , _Cell Reports 2025_  (**SCI Q1, IF: 8.1**)
 2. Ziwen Zhao#, **Yixin Su**#, Yuhua Li*，Yixiong Zou, Ruixuan Li, and Rui Zhang*，A Survey on Self-Supervised Graph Foundation Models: Knowledge-Based Perspective. _IEEE Transactions on Knowledge and Data Engineering (TKDE) 2025_ (**CCF-A**)
-3. **Yixin Su**#, Wei Jiang#, Fangquan Lin, Cheng Yang, Sarah Erfani, Junhao Gan, Yunxiang Zhao*, Ruixuan Li, Rui Zhang*, IEDR: A Context-aware Intrinsic and Extrinsic Disentangled Recommender System. _IEEE Transactions on Information Systems (TOIS) 2025_ (**CCF-A**)
+3. **Yixin Su**#, Wei Jiang#, Fangquan Lin, Cheng Yang, Sarah Erfani, Junhao Gan, Yunxiang Zhao*, Ruixuan Li, Rui Zhang*, IEDR: A Context-aware Intrinsic and Extrinsic Disentangled Recommender System. _ACM Transactions on Information Systems (TOIS) 2025_ (**CCF-A**)
 4. Yunxiang Zhao#, Jijun Yu#, **Yixin Su**#, You Shu#, Enhao Ma#, Jing Wang, Shuyang Jiang, Congwen Wei, Dongsheng Li, Zhen Huang*, Gong Cheng*, Hongguang Ren*, Jiannan Feng*, A unified deep framework for peptide–major histocompatibility complex–T cell receptor binding prediction. _Nature Machine Intelligence (NMI) 2025_ [paper&code](https://www.nature.com/articles/s42256-025-01002-0) (**SCI-Q1, IF: 26.4**)
 5. Yuchao Ma, Ruohan Qian, Bingzhe Wang, Qi Qi, Wenqiang liu, Qian Tang, Zhao Shen, Wei Zhong, Bo Shen, **Yixin Su**, Bin Zou, Wen Yi, Zhi Guo, shuanglong li, Liu Lin, GenAuction: A Generative Auction for Online Advertising. _Annual AAAI Conference on Artificial Intelligence (AAAI) 2025_ (**CCF-A**)
 6. Rui Zhang#, **Yixin Su**#*, Bayu Distiawan Trisedya, Xiaoyan Zhao, Min Yang, Hong Cheng, Jianzhong Qi, AutoAlign: Fully Automatic and Effective Knowledge Graph Alignment enabled by Large Language Models. _IEEE Transactions on Knowledge and Data Engineering (TKDE) 2024_. [paper](https://arxiv.org/pdf/2307.11772) [code](https://github.com/ruizhang-ai/AutoAlign) (**CCF-A**)
