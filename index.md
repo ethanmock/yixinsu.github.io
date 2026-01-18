@@ -1,4 +1,4 @@
-# Yixin (Ethan) Su
+# Yixin Su（Ethan）
 
 - Associate Professor at the School of Computer Science and Technology, Huazhong University of Science and Technology  
 - Previously worked at Baidu and PayPal on large-scale advertising systems and foundation model research
