@@ -1,0 +1,256 @@
+[
+  {
+    "year": 2025,
+    "title": "EBAMP: An Efficient De Novo Broad-Spectrum Antimicrobial Peptide Discovery Framework",
+    "authors": "Yunxiang Zhao#, Qian Li#, Mingyue Sun#, Yixin Su#, Xinxin Su#, Ling Jiang, Xinran Zhang, et al.",
+    "venue": "Cell Reports 2025",
+    "badges": [
+      "SCI Q1 · IF 8.1"
+    ],
+    "links": [],
+    "topics": [
+      "bio"
+    ]
+  },
+  {
+    "year": 2025,
+    "title": "A Survey on Self-Supervised Graph Foundation Models: A Knowledge-Based Perspective",
+    "authors": "Ziwen Zhao#, Yixin Su#, Yuhua Li*, Yixiong Zou, Ruixuan Li, Rui Zhang*",
+    "venue": "IEEE TKDE 2025",
+    "badges": [
+      "CCF-A"
+    ],
+    "links": [],
+    "topics": [
+      "gnn",
+      "llm"
+    ]
+  },
+  {
+    "year": 2025,
+    "title": "IEDR: A Context-aware Intrinsic and Extrinsic Disentangled Recommender System",
+    "authors": "Yixin Su#, Wei Jiang#, Fangquan Lin, Cheng Yang, Sarah Erfani, Junhao Gan, Yunxiang Zhao*, Ruixuan Li, Rui Zhang*",
+    "venue": "ACM TOIS 2025",
+    "badges": [
+      "CCF-A"
+    ],
+    "links": [],
+    "topics": [
+      "rec"
+    ]
+  },
+  {
+    "year": 2025,
+    "title": "A Unified Deep Framework for Peptide–MHC–T Cell Receptor Binding Prediction",
+    "authors": "Yunxiang Zhao#, Jijun Yu#, Yixin Su#, You Shu#, Enhao Ma#, Jing Wang, Zhen Huang*, Gong Cheng*, Hongguang Ren*, Jiannan Feng*",
+    "venue": "Nature Machine Intelligence 2025",
+    "badges": [
+      "SCI Q1 · IF 26.4"
+    ],
+    "links": [
+      {
+        "label": "paper & code",
+        "url": "https://www.nature.com/articles/s42256-025-01002-0"
+      }
+    ],
+    "topics": [
+      "bio"
+    ]
+  },
+  {
+    "year": 2025,
+    "title": "GenAuction: A Generative Auction for Online Advertising",
+    "authors": "Yuchao Ma, Ruohan Qian, Bingzhe Wang, Qi Qi, Wenqiang Liu, Qian Tang, Zhao Shen, Wei Zhong, Bo Shen, Yixin Su, Bin Zou, Wen Yi, Zhi Guo, Shuanglong Li, Liu Lin",
+    "venue": "AAAI 2025",
+    "badges": [
+      "CCF-A"
+    ],
+    "links": [],
+    "topics": [
+      "rec"
+    ]
+  },
+  {
+    "year": 2024,
+    "title": "AutoAlign: Fully Automatic and Effective Knowledge Graph Alignment Enabled by Large Language Models",
+    "authors": "Rui Zhang#, Yixin Su#*, Bayu Distiawan Trisedya, Xiaoyan Zhao, Min Yang, Hong Cheng, Jianzhong Qi",
+    "venue": "IEEE TKDE 2024",
+    "badges": [
+      "CCF-A"
+    ],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://arxiv.org/pdf/2307.11772"
+      },
+      {
+        "label": "code",
+        "url": "https://github.com/ruizhang-ai/AutoAlign"
+      }
+    ],
+    "topics": [
+      "llm"
+    ]
+  },
+  {
+    "year": 2024,
+    "title": "Hierarchical Shared Encoder with Task-Specific Transformer Layer Selection for Emotion-Cause Pair Extraction",
+    "authors": "Xinxin Su, Zhen Huang, Yixin Su, Bayu Distiawan Trisedya, Yong Dou, Yunxiang Zhao",
+    "venue": "IEEE Trans. on Affective Computing 2024",
+    "badges": [
+      "CCF-B"
+    ],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10504556"
+      }
+    ],
+    "topics": [
+      "nlp"
+    ]
+  },
+  {
+    "year": 2023,
+    "title": "Learning Region Similarities via Graph-based Deep Metric Learning",
+    "authors": "Yunxiang Zhao, Jianzhong Qi, Bayu D. Trisedya, Yixin Su, Rui Zhang, Hongguang Ren*",
+    "venue": "IEEE TKDE 2023",
+    "badges": [
+      "CCF-A"
+    ],
+    "links": [],
+    "topics": [
+      "gnn"
+    ]
+  },
+  {
+    "year": 2022,
+    "title": "Dual Disentangled Attention for Multi-Information Utilization in Sequential Recommendation",
+    "authors": "Ziqiang Cui#, Yixin Su#, Fangquan Lin, Cheng Yang, Hanwei Zhang, Jihai Zhang",
+    "venue": "IJCNN 2022",
+    "badges": [],
+    "links": [],
+    "topics": [
+      "rec"
+    ]
+  },
+  {
+    "year": 2022,
+    "title": "Detecting Arbitrary Order Beneficial Feature Interactions for Recommender Systems",
+    "authors": "Yixin Su, Yunxiang Zhao, Sarah Erfani*, Junhao Gan, Rui Zhang*",
+    "venue": "SIGKDD 2022",
+    "badges": [
+      "CCF-A"
+    ],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://arxiv.org/abs/2206.13764"
+      },
+      {
+        "label": "code",
+        "url": "https://github.com/ruizhang-ai/HIRS_Hypergraph_Infomax_Recommender_System"
+      }
+    ],
+    "topics": [
+      "fi",
+      "rec"
+    ]
+  },
+  {
+    "year": 2021,
+    "title": "Detecting Beneficial Feature Interactions for Recommender Systems",
+    "authors": "Yixin Su, Rui Zhang, Sarah Erfani*, Zhenghua Xu*",
+    "venue": "AAAI 2021",
+    "badges": [
+      "CCF-A"
+    ],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://arxiv.org/abs/2008.00404"
+      },
+      {
+        "label": "code",
+        "url": "https://github.com/ruizhang-ai/SIGN-Detecting-Beneficial-Feature-Interactions-for-Recommender-Systems"
+      },
+      {
+        "label": "PaddleRec",
+        "url": "https://github.com/PaddlePaddle/PaddleRec/tree/master/models/rank/sign"
+      }
+    ],
+    "topics": [
+      "fi"
+    ]
+  },
+  {
+    "year": 2021,
+    "title": "Neural Graph Matching based Collaborative Filtering",
+    "authors": "Yixin Su, Rui Zhang, Sarah Erfani, Junhao Gan",
+    "venue": "SIGIR 2021",
+    "badges": [
+      "CCF-A"
+    ],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://arxiv.org/abs/2105.04067"
+      },
+      {
+        "label": "code",
+        "url": "https://github.com/ruizhang-ai/GMCF_Neural_Graph_Matching_based_Collaborative_Filtering"
+      }
+    ],
+    "topics": [
+      "gnn",
+      "rec"
+    ]
+  },
+  {
+    "year": 2019,
+    "title": "MMF: Attribute Interpretable Collaborative Filtering",
+    "authors": "Yixin Su, Sarah Erfani, Rui Zhang*",
+    "venue": "IJCNN 2019",
+    "badges": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://arxiv.org/abs/1908.01099"
+      }
+    ],
+    "topics": [
+      "rec"
+    ]
+  },
+  {
+    "year": 2019,
+    "title": "Using GAN to Generate Sport News from Live Game Stats",
+    "authors": "Changliang Li, Yixin Su, Ji Qi, Min Xiao",
+    "venue": "ICCC 2019",
+    "badges": [],
+    "links": [],
+    "topics": [
+      "nlp"
+    ]
+  },
+  {
+    "year": 2018,
+    "title": "Text-To-Text Generative Adversarial Networks",
+    "authors": "Changliang Li, Yixin Su, Wenju Liu",
+    "venue": "IJCNN 2018",
+    "badges": [],
+    "links": [],
+    "topics": [
+      "nlp"
+    ]
+  },
+  {
+    "year": 2016,
+    "title": "Density and Distance Based KNN Approach to Classification",
+    "authors": "Yixin Su, Sheng-Uei Guan",
+    "venue": "IJAEC 2016",
+    "badges": [],
+    "links": [],
+    "topics": []
+  }
+]
