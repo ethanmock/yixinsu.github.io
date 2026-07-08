@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Design source backups (kept locally, not published)
+*.zip
+个人主页重新设计.zip
+
+# Local preview/build scaffolding
+site/
+.claude/launch.json
+scratchpad/
