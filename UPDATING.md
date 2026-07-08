@@ -140,9 +140,13 @@
   authors: "Yixin Su, Rui Zhang, Sarah Erfani*, Zhenghua Xu*",
   summary: { en: "一句话英文解读", zh: "一句话中文解读" },
   note: { en: "亮点/收录说明(可选)", zh: "..." },   // 无则写 null
+  image: "",                                // 配图：留空则用主题矢量图；填真实图见下
+  art: "fi",                                // 无配图时的主题图: fi(特征交互)/rec(推荐)/bio(医工)
   links: [ { label: "paper", url: "https://..." } ]  // 无则写 []
 }
 ```
+
+**给某篇配真实论文图**：把图片（框架图/teaser）放到 `assets/highlights/`（如 `assets/highlights/sign.png`），再把该卡片的 `image` 设成 `"assets/highlights/sign.png"` 即可（会自动替换主题矢量图）。桌面端图在左、文字在右；手机端自动只显示文字。
 > `demo.html` 是独立文件，改完**无需**跑 `build.py`，直接 `git commit && git push` 即可（`build.py` 只负责把 `demoUrl` 这个地址写进主页，不碰 demo 内容）。改完想本地看：`python3 -m http.server 4599` 然后开 `http://localhost:4599/demo.html`。
 
 如果之后想改标题"Research Highlights / 研究亮点"这行小标题文案，它在 `index.html` 模板的 `research:` 文案块里（中英各一处）。

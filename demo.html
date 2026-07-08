@@ -6,59 +6,70 @@
 <title>Research Highlights — Yixin Su</title>
 <style>
   /* ---- Research Highlights: flip-through cards.
-         Edit the CARDS array below to add / change highlighted works. ---- */
+         Edit the CARDS array below to add / change highlighted works.
+         Give a card a real figure by setting  image: "assets/highlights/xxx.png"
+         (drop the file in assets/highlights/); otherwise a themed motif is drawn. ---- */
   :root{
     --accent:#1a3a5c; --ink:#26241f; --muted:#6f6b63;
-    --line:#e5e3df; --paper:#ffffff; --bg:transparent;
+    --line:#e5e3df; --paper:#ffffff;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
   body{
-    background:var(--bg); color:var(--ink);
+    background:transparent; color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'PingFang SC','Microsoft YaHei',sans-serif;
     display:flex; align-items:center; justify-content:center;
-    padding:clamp(14px,3vw,26px);
+    padding:clamp(12px,2.4vw,22px); overflow:hidden;
   }
-  .wrap{width:100%; max-width:640px}
-  .topbar{display:flex; align-items:center; justify-content:space-between; margin-bottom:14px}
+  .wrap{width:100%; max-width:900px}
+  .topbar{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px}
   .eyebrow{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:600}
   .lang{font:inherit; font-size:12px; color:var(--muted); background:none; border:1px solid var(--line);
     border-radius:999px; padding:5px 12px; cursor:pointer}
   .lang:hover{border-color:var(--accent); color:var(--accent)}
 
-  .stage{perspective:1600px}
+  .stage{perspective:1800px}
   .card{
     background:var(--paper); border:1px solid var(--line); border-radius:14px;
-    padding:clamp(22px,4vw,34px); box-shadow:0 6px 30px rgba(30,30,25,.06);
-    transform-origin:center; will-change:transform,opacity; min-height:300px;
-    display:flex; flex-direction:column; gap:14px;
+    padding:clamp(18px,3vw,26px); box-shadow:0 6px 30px rgba(30,30,25,.06);
+    transform-origin:center; will-change:transform,opacity;
+    display:grid; grid-template-columns:1fr; gap:clamp(14px,2.5vw,26px); align-items:center;
   }
-  .meta{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-  .badge{font-size:11px; font-weight:600; letter-spacing:.04em; color:var(--accent);
-    background:#eef1f5; border:1px solid #dde4ec; border-radius:999px; padding:4px 11px}
+  @media (min-width:560px){ .card{ grid-template-columns:minmax(0,300px) minmax(0,1fr) } }
+
+  .visual{
+    border:1px solid var(--line); border-radius:10px; overflow:hidden;
+    background:#eef2f6; aspect-ratio:16/10;
+  }
+  @media (max-width:559px){ .visual{ display:none } }  /* text-only on phones, keeps it scroll-free */
+  .visual img, .visual svg{ width:100%; height:100%; object-fit:cover; display:block }
+
+  .content{display:flex; flex-direction:column; gap:10px; min-width:0}
+  .meta{display:flex; align-items:center; gap:9px; flex-wrap:wrap}
+  .badge{font-size:11px; font-weight:600; letter-spacing:.03em; color:var(--accent);
+    background:#eef1f5; border:1px solid #dde4ec; border-radius:999px; padding:3px 10px}
   .topic{font-size:11px; color:var(--muted); letter-spacing:.05em}
-  .idx{margin-left:auto; font-size:12px; color:#b7b3ab; font-variant-numeric:tabular-nums}
+  .idx{margin-left:auto; font-size:11.5px; color:#b7b3ab; font-variant-numeric:tabular-nums}
   .title{
     font-family:'Newsreader','Noto Serif SC',Georgia,'Songti SC',serif;
-    font-weight:500; font-size:clamp(20px,3.4vw,27px); line-height:1.22; color:#1b1a17;
+    font-weight:500; font-size:clamp(19px,2.7vw,25px); line-height:1.2; color:#1b1a17;
   }
-  .summary{font-size:clamp(14px,2.4vw,16px); line-height:1.6; color:#3f3c36}
-  .authors{font-size:12.5px; color:var(--muted); line-height:1.5}
-  .note{font-size:12.5px; color:var(--accent); background:#f3f6fa; border-left:3px solid var(--accent);
-    border-radius:0 6px 6px 0; padding:8px 12px; line-height:1.5}
-  .links{display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:6px}
+  .summary{font-size:clamp(13.5px,1.9vw,15.5px); line-height:1.55; color:#3f3c36}
+  .authors{font-size:12px; color:var(--muted); line-height:1.45}
+  .note{font-size:12px; color:var(--accent); background:#f3f6fa; border-left:3px solid var(--accent);
+    border-radius:0 6px 6px 0; padding:7px 11px; line-height:1.45}
+  .links{display:flex; gap:8px; flex-wrap:wrap; margin-top:2px}
   .links a{font-size:12.5px; color:var(--accent); text-decoration:none; border:1px solid #dde4ec;
-    background:#f7f9fb; border-radius:999px; padding:6px 13px; display:inline-flex; align-items:center; gap:6px}
+    background:#f7f9fb; border-radius:999px; padding:5px 12px; display:inline-flex; align-items:center; gap:6px}
   .links a:hover{background:var(--accent); color:#fff; border-color:var(--accent)}
 
-  .controls{display:flex; align-items:center; justify-content:center; gap:16px; margin-top:16px}
-  .nav{width:38px; height:38px; border-radius:999px; border:1px solid var(--line); background:var(--paper);
+  .controls{display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px}
+  .nav{width:36px; height:36px; border-radius:999px; border:1px solid var(--line); background:var(--paper);
     color:var(--accent); cursor:pointer; font-size:16px; display:grid; place-items:center; transition:.15s}
   .nav:hover{background:var(--accent); color:#fff; border-color:var(--accent)}
   .dots{display:flex; gap:7px}
   .dot{width:8px; height:8px; border-radius:999px; background:#d6d3cc; border:none; cursor:pointer; padding:0}
   .dot.on{background:var(--accent); width:22px}
-  /* Light-only, to match the (light) main site it is embedded in. */
 </style>
 </head>
 <body>
@@ -78,7 +89,9 @@
 </div>
 
 <script>
-/* ====== EDIT HERE: add or change highlighted works ====== */
+/* ====== EDIT HERE: add or change highlighted works ======
+   image: path to a real figure (recommended), e.g. "assets/highlights/sign.png".
+          Leave "" to use the themed motif named by `art` (fi | rec | bio).      */
 const CARDS = [
   {
     badge: "AAAI 2021 · CCF-A",
@@ -86,13 +99,12 @@ const CARDS = [
     title: "Detecting Beneficial Feature Interactions for Recommender Systems",
     authors: "Yixin Su, Rui Zhang, Sarah Erfani*, Zhenghua Xu*",
     summary: {
-      en: "Not every feature combination helps a recommender. SIGN uses a graph neural network to automatically detect the beneficial feature interactions — lifting both accuracy and interpretability.",
+      en: "Not every feature combination helps a recommender. SIGN uses a graph neural network to automatically detect the beneficial feature interactions — improving both accuracy and interpretability.",
       zh: "并非每种特征组合都对推荐有益。SIGN 用图神经网络自动识别真正有益的特征交互，同时提升精度与可解释性。"
     },
-    note: {
-      en: "Adopted into Baidu's PaddleRec model library.",
-      zh: "已被百度 PaddleRec 模型库收录。"
-    },
+    note: { en: "Adopted into Baidu's PaddleRec model library.", zh: "已被百度 PaddleRec 模型库收录。" },
+    image: "",
+    art: "fi",
     links: [
       { label: "paper", url: "https://arxiv.org/abs/2008.00404" },
       { label: "code", url: "https://github.com/ruizhang-ai/SIGN-Detecting-Beneficial-Feature-Interactions-for-Recommender-Systems" },
@@ -109,6 +121,8 @@ const CARDS = [
       zh: "用户选择既含稳定偏好、也含随情境而变的因素。IEDR 将内在与外在因素解耦，让情境感知推荐更准、更可解释。"
     },
     note: null,
+    image: "",
+    art: "rec",
     links: []
   },
   {
@@ -117,91 +131,112 @@ const CARDS = [
     title: "A Unified Deep Framework for Peptide–MHC–T Cell Receptor Binding Prediction",
     authors: "Yunxiang Zhao#, Jijun Yu#, Yixin Su#, You Shu#, Enhao Ma#, Jing Wang, Zhen Huang*, Gong Cheng*, Hongguang Ren*, Jiannan Feng*",
     summary: {
-      en: "How peptides, MHC and T-cell receptors bind is central to immunotherapy and vaccine design. This unified deep framework models all three together, published in Nature Machine Intelligence.",
+      en: "How peptides, MHC and T-cell receptors bind is central to immunotherapy and vaccine design. This unified deep framework models all three together — published in Nature Machine Intelligence.",
       zh: "多肽、MHC 与 T 细胞受体如何结合，是免疫治疗与疫苗设计的核心问题。该统一深度框架将三者联合建模，发表于 Nature Machine Intelligence。"
     },
     note: null,
-    links: [
-      { label: "paper & code", url: "https://www.nature.com/articles/s42256-025-01002-0" }
-    ]
+    image: "",
+    art: "bio",
+    links: [ { label: "paper & code", url: "https://www.nature.com/articles/s42256-025-01002-0" } ]
   }
 ];
 /* ======================================================= */
 
-const I18N = {
-  en: { eyebrow: "Research Highlights", langBtn: "中文" },
-  zh: { eyebrow: "研究亮点", langBtn: "EN" }
+// Themed placeholder motifs (used when a card has no `image`).
+const ART = {
+  fi: `<svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <rect width="200" height="125" fill="#eef2f6"/>
+    <g stroke="#c3ccd6" stroke-width="1.4">
+      <line x1="46" y1="34" x2="150" y2="30"/><line x1="46" y1="34" x2="70" y2="92"/>
+      <line x1="150" y1="30" x2="158" y2="90"/><line x1="70" y1="92" x2="120" y2="66"/>
+    </g>
+    <g stroke="#1a3a5c" stroke-width="2.4">
+      <line x1="46" y1="34" x2="120" y2="66"/><line x1="150" y1="30" x2="120" y2="66"/>
+      <line x1="120" y1="66" x2="158" y2="90"/>
+    </g>
+    <g>
+      <circle cx="46" cy="34" r="9" fill="#fff" stroke="#8aa0b6" stroke-width="1.6"/>
+      <circle cx="150" cy="30" r="9" fill="#fff" stroke="#8aa0b6" stroke-width="1.6"/>
+      <circle cx="70" cy="92" r="8" fill="#fff" stroke="#8aa0b6" stroke-width="1.6"/>
+      <circle cx="158" cy="90" r="8" fill="#fff" stroke="#8aa0b6" stroke-width="1.6"/>
+      <circle cx="120" cy="66" r="12" fill="#1a3a5c"/>
+    </g></svg>`,
+  rec: `<svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <rect width="200" height="125" fill="#eef2f6"/>
+    <circle cx="100" cy="62" r="30" fill="none" stroke="#c3ccd6" stroke-width="1.6"/>
+    <path d="M100 32 A30 30 0 0 0 100 92 Z" fill="#1a3a5c" opacity=".9"/>
+    <path d="M100 32 A30 30 0 0 1 100 92" fill="#dbe4ee"/>
+    <line x1="100" y1="26" x2="100" y2="98" stroke="#fff" stroke-width="2" stroke-dasharray="3 4"/>
+    <path d="M52 62 H30 M40 55 L30 62 L40 69" fill="none" stroke="#8aa0b6" stroke-width="2"/>
+    <path d="M148 62 H170 M160 55 L170 62 L160 69" fill="none" stroke="#8aa0b6" stroke-width="2"/></svg>`,
+  bio: `<svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <rect width="200" height="125" fill="#eef2f6"/>
+    <rect x="34" y="46" width="46" height="34" rx="10" fill="#1a3a5c"/>
+    <rect x="78" y="58" width="46" height="34" rx="10" fill="#7d95ac"/>
+    <rect x="122" y="42" width="46" height="34" rx="10" fill="#b9c6d5"/>
+    <circle cx="80" cy="63" r="4" fill="#eef2f6"/><circle cx="124" cy="75" r="4" fill="#eef2f6"/>
+    <path d="M20 96 q40 -14 80 0 t80 0" fill="none" stroke="#c3ccd6" stroke-width="1.6"/></svg>`
 };
 
-let lang = "en";
-let i = 0;
-let busy = false;
+const I18N = { en:{eyebrow:"Research Highlights",langBtn:"中文"}, zh:{eyebrow:"研究亮点",langBtn:"EN"} };
 
-const card = document.getElementById("card");
-const dotsEl = document.getElementById("dots");
+let lang="en", i=0, busy=false;
+const card=document.getElementById("card"), dotsEl=document.getElementById("dots");
 
+function visual(c){
+  if(c.image) return `<img src="${c.image}" alt="">`;
+  return ART[c.art] || ART.fi;
+}
 function render(n){
-  const c = CARDS[n];
-  const links = (c.links || []).map(l =>
-    `<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join("");
-  const note = c.note ? `<div class="note">${c.note[lang]}</div>` : "";
-  card.innerHTML = `
-    <div class="meta">
-      <span class="badge">${c.badge}</span>
-      <span class="topic">${c.topic[lang]}</span>
-      <span class="idx">${String(n+1).padStart(2,"0")} / ${String(CARDS.length).padStart(2,"0")}</span>
-    </div>
-    <h3 class="title">${c.title}</h3>
-    <p class="summary">${c.summary[lang]}</p>
-    <p class="authors">${c.authors}</p>
-    ${note}
-    <div class="links">${links}</div>`;
+  const c=CARDS[n];
+  const links=(c.links||[]).map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join("");
+  const note=c.note?`<div class="note">${c.note[lang]}</div>`:"";
+  card.innerHTML=`
+    <div class="visual">${visual(c)}</div>
+    <div class="content">
+      <div class="meta">
+        <span class="badge">${c.badge}</span>
+        <span class="topic">${c.topic[lang]}</span>
+        <span class="idx">${String(n+1).padStart(2,"0")} / ${String(CARDS.length).padStart(2,"0")}</span>
+      </div>
+      <h3 class="title">${c.title}</h3>
+      <p class="summary">${c.summary[lang]}</p>
+      <p class="authors">${c.authors}</p>
+      ${note}
+      <div class="links">${links}</div>
+    </div>`;
   [...dotsEl.children].forEach((d,k)=>d.classList.toggle("on",k===n));
 }
-
-function go(n, dir){
+function go(n,dir){
   if(busy) return;
-  n = (n + CARDS.length) % CARDS.length;
-  if(n === i) return;
-  busy = true;
-  card.style.transition = "transform .2s ease, opacity .2s ease";
-  card.style.transform = `rotateY(${dir>0 ? -85 : 85}deg)`;
-  card.style.opacity = "0";
+  n=(n+CARDS.length)%CARDS.length; if(n===i) return;
+  busy=true;
+  card.style.transition="transform .2s ease, opacity .2s ease";
+  card.style.transform=`rotateY(${dir>0?-85:85}deg)`; card.style.opacity="0";
   setTimeout(()=>{
-    i = n; render(i);
-    card.style.transition = "none";
-    card.style.transform = `rotateY(${dir>0 ? 85 : -85}deg)`;
+    i=n; render(i);
+    card.style.transition="none"; card.style.transform=`rotateY(${dir>0?85:-85}deg)`;
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      card.style.transition = "transform .24s ease, opacity .24s ease";
-      card.style.transform = "rotateY(0deg)";
-      card.style.opacity = "1";
-      setTimeout(()=>{ busy = false; }, 240);
+      card.style.transition="transform .24s ease, opacity .24s ease";
+      card.style.transform="rotateY(0deg)"; card.style.opacity="1";
+      setTimeout(()=>busy=false,240);
     }));
-  }, 200);
+  },200);
 }
-
-// dots
 CARDS.forEach((_,k)=>{
-  const b = document.createElement("button");
-  b.className = "dot"; b.setAttribute("aria-label","slide "+(k+1));
-  b.onclick = ()=>go(k, k>i?1:-1);
-  dotsEl.appendChild(b);
+  const b=document.createElement("button");
+  b.className="dot"; b.setAttribute("aria-label","slide "+(k+1));
+  b.onclick=()=>go(k,k>i?1:-1); dotsEl.appendChild(b);
 });
-
-document.getElementById("next").onclick = ()=>go(i+1, 1);
-document.getElementById("prev").onclick = ()=>go(i-1, -1);
-document.addEventListener("keydown", e=>{
-  if(e.key==="ArrowRight") go(i+1,1);
-  if(e.key==="ArrowLeft") go(i-1,-1);
-});
-document.getElementById("lang").onclick = ()=>{
-  lang = lang==="en" ? "zh" : "en";
-  document.documentElement.lang = lang;
-  document.getElementById("lang").textContent = I18N[lang].langBtn;
-  document.querySelector('[data-i18n="eyebrow"]').textContent = I18N[lang].eyebrow;
+document.getElementById("next").onclick=()=>go(i+1,1);
+document.getElementById("prev").onclick=()=>go(i-1,-1);
+document.addEventListener("keydown",e=>{ if(e.key==="ArrowRight")go(i+1,1); if(e.key==="ArrowLeft")go(i-1,-1); });
+document.getElementById("lang").onclick=()=>{
+  lang=lang==="en"?"zh":"en"; document.documentElement.lang=lang;
+  document.getElementById("lang").textContent=I18N[lang].langBtn;
+  document.querySelector('[data-i18n="eyebrow"]').textContent=I18N[lang].eyebrow;
   render(i);
 };
-
 render(0);
 </script>
 </body>
