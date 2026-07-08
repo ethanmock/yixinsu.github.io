@@ -188,7 +188,7 @@ python3 -m http.server 4599
 
 这些双语文案目前**内联在 `index.html` 的模板里**，没有抽成 data 文件。少量改动可以直接在 `index.html` 里搜索英文原文替换（中英两处都要改）。**注意**：`index.html` 是打包产物，除内容外的结构/字体/脚本不要动；改完用 `python3 scripts/build.py --check` 确认没破坏结构（应显示 in sync）。改动较多时建议找维护者从设计源重新生成，更安全。
 
-> Teaching / Students 目前是 "coming soon" 占位，属于此类内联文案。
+> **Teaching / Students 区当前已隐藏**（连同导航里的 Teaching 链接一起移除了，因为暂无内容）。等你有课程/学生信息了告诉我，我从 git 历史恢复并做成和 Publications 一样的数据驱动形式（改 JSON 即可更新）。
 
 ---
 
