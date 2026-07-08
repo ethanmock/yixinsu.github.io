@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-"""Inject content from data/*.json into index.html.
+"""Inject content + config from data/ into index.html.
 
-Content lives in data/news.json and data/publications.json (the source of
-truth). index.html is a self-contained bundle; this script rewrites the
-`news = [...]` and `pubs = [...]` arrays embedded in its template with the
-JSON data, re-encoding the bundle exactly the way the runtime expects.
+Sources of truth (edit these, never hand-edit index.html):
+    data/news.json          news / updates list
+    data/publications.json  publications list
+    data/config.json        site settings: accent, defaultLang,
+                            showResearchDemo, demoUrl
+
+index.html is a self-contained bundle. This script rewrites:
+  * the `news = [...]` and `pubs = [...]` arrays in its template, and
+  * the prop defaults inside the template's data-props attribute,
+then re-encodes the bundle the way the runtime expects.
 
 Usage:
     python3 scripts/build.py          # edit data/*.json first, then run this
@@ -12,15 +18,26 @@ Usage:
 
 Workflow: edit data/*.json  ->  python3 scripts/build.py  ->  git commit
 """
-import json, re, sys, os
+import json, re, sys, os, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INDEX = os.path.join(ROOT, "index.html")
+
+# Which config keys map onto template props (data-props schema defaults).
+CONFIG_KEYS = ("accent", "defaultLang", "showResearchDemo", "demoUrl")
+
 
 def safe_json(obj):
     # json.dumps, but keep "</script>" (and any "</...") from closing the
     # host <script> tag. "\/" is a valid JSON escape that parses back to "/".
     return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
+
+
+def attr_escape(s):
+    # Escape a string for use inside a double-quoted HTML attribute.
+    return (s.replace("&", "&amp;").replace('"', "&quot;")
+             .replace("<", "&lt;").replace(">", "&gt;"))
+
 
 def find_array(s, name):
     """Return (start, end) covering the [...] of `name = [ ... ]` in s."""
@@ -38,31 +55,54 @@ def find_array(s, name):
                 return j, k + 1
     raise SystemExit(f"[build] unbalanced brackets for `{name}`")
 
+
+def apply_config(template, config):
+    """Set prop defaults inside the data-props attribute from config."""
+    m = re.search(r'data-props="([^"]*)"', template)
+    if not m:
+        raise SystemExit("[build] data-props attribute not found in template")
+    schema = json.loads(html.unescape(m.group(1)))
+    for key in CONFIG_KEYS:
+        if key in config and key in schema and isinstance(schema[key], dict):
+            schema[key]["default"] = config[key]
+    new_attr = 'data-props="' + attr_escape(json.dumps(schema, ensure_ascii=False)) + '"'
+    return template[:m.start()] + new_attr + template[m.end():]
+
+
 def rebuild():
-    html = open(INDEX, encoding="utf-8").read()
+    html_text = open(INDEX, encoding="utf-8").read()
     tpl_m = re.search(r'(<script type="__bundler/template"[^>]*>)(.*?)(</script>)',
-                      html, re.S)
+                      html_text, re.S)
     if not tpl_m:
         raise SystemExit("[build] template script block not found in index.html")
     template = json.loads(tpl_m.group(2).strip())
 
-    news = json.load(open(os.path.join(ROOT, "data", "news.json"), encoding="utf-8"))
-    pubs = json.load(open(os.path.join(ROOT, "data", "publications.json"), encoding="utf-8"))
+    def load(name):
+        return json.load(open(os.path.join(ROOT, "data", name), encoding="utf-8"))
 
-    # Replace pubs first so news' offsets stay valid, then news; recompute each.
+    news = load("news.json")
+    pubs = load("publications.json")
+    config_path = os.path.join(ROOT, "data", "config.json")
+    config = json.load(open(config_path, encoding="utf-8")) if os.path.exists(config_path) else {}
+
+    # Replace arrays (pubs first so offsets stay valid; each is recomputed).
     for name, data in (("pubs", pubs), ("news", news)):
         a, b = find_array(template, name)
         template = template[:a] + json.dumps(data, ensure_ascii=False) + template[b:]
 
+    if config:
+        template = apply_config(template, config)
+
     new_body = safe_json(template)
-    new_html = html[:tpl_m.start(2)] + new_body + html[tpl_m.end(2):]
-    return html, new_html
+    new_html = html_text[:tpl_m.start(2)] + new_body + html_text[tpl_m.end(2):]
+    return html_text, new_html
+
 
 def main():
     old, new = rebuild()
     if "--check" in sys.argv:
         if old == new:
-            print("[build] index.html is in sync with data/*.json")
+            print("[build] index.html is in sync with data/*")
             return 0
         print("[build] OUT OF SYNC — run `python3 scripts/build.py`")
         return 1
@@ -72,6 +112,7 @@ def main():
     open(INDEX, "w", encoding="utf-8").write(new)
     print(f"[build] index.html updated ({len(new)//1024} KB)")
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
