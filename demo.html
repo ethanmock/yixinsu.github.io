@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Highlights — Yixin Su</title>
+<style>
+  /* ---- Research Highlights: flip-through cards.
+         Edit the CARDS array below to add / change highlighted works. ---- */
+  :root{
+    --accent:#1a3a5c; --ink:#26241f; --muted:#6f6b63;
+    --line:#e5e3df; --paper:#ffffff; --bg:transparent;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'PingFang SC','Microsoft YaHei',sans-serif;
+    display:flex; align-items:center; justify-content:center;
+    padding:clamp(14px,3vw,26px);
+  }
+  .wrap{width:100%; max-width:640px}
+  .topbar{display:flex; align-items:center; justify-content:space-between; margin-bottom:14px}
+  .eyebrow{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:600}
+  .lang{font:inherit; font-size:12px; color:var(--muted); background:none; border:1px solid var(--line);
+    border-radius:999px; padding:5px 12px; cursor:pointer}
+  .lang:hover{border-color:var(--accent); color:var(--accent)}
+
+  .stage{perspective:1600px}
+  .card{
+    background:var(--paper); border:1px solid var(--line); border-radius:14px;
+    padding:clamp(22px,4vw,34px); box-shadow:0 6px 30px rgba(30,30,25,.06);
+    transform-origin:center; will-change:transform,opacity; min-height:300px;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .meta{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .badge{font-size:11px; font-weight:600; letter-spacing:.04em; color:var(--accent);
+    background:#eef1f5; border:1px solid #dde4ec; border-radius:999px; padding:4px 11px}
+  .topic{font-size:11px; color:var(--muted); letter-spacing:.05em}
+  .idx{margin-left:auto; font-size:12px; color:#b7b3ab; font-variant-numeric:tabular-nums}
+  .title{
+    font-family:'Newsreader','Noto Serif SC',Georgia,'Songti SC',serif;
+    font-weight:500; font-size:clamp(20px,3.4vw,27px); line-height:1.22; color:#1b1a17;
+  }
+  .summary{font-size:clamp(14px,2.4vw,16px); line-height:1.6; color:#3f3c36}
+  .authors{font-size:12.5px; color:var(--muted); line-height:1.5}
+  .note{font-size:12.5px; color:var(--accent); background:#f3f6fa; border-left:3px solid var(--accent);
+    border-radius:0 6px 6px 0; padding:8px 12px; line-height:1.5}
+  .links{display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:6px}
+  .links a{font-size:12.5px; color:var(--accent); text-decoration:none; border:1px solid #dde4ec;
+    background:#f7f9fb; border-radius:999px; padding:6px 13px; display:inline-flex; align-items:center; gap:6px}
+  .links a:hover{background:var(--accent); color:#fff; border-color:var(--accent)}
+
+  .controls{display:flex; align-items:center; justify-content:center; gap:16px; margin-top:16px}
+  .nav{width:38px; height:38px; border-radius:999px; border:1px solid var(--line); background:var(--paper);
+    color:var(--accent); cursor:pointer; font-size:16px; display:grid; place-items:center; transition:.15s}
+  .nav:hover{background:var(--accent); color:#fff; border-color:var(--accent)}
+  .dots{display:flex; gap:7px}
+  .dot{width:8px; height:8px; border-radius:999px; background:#d6d3cc; border:none; cursor:pointer; padding:0}
+  .dot.on{background:var(--accent); width:22px}
+  /* Light-only, to match the (light) main site it is embedded in. */
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <span class="eyebrow" data-i18n="eyebrow">Research Highlights</span>
+    <button class="lang" id="lang">中文</button>
+  </div>
+  <div class="stage">
+    <article class="card" id="card"></article>
+  </div>
+  <div class="controls">
+    <button class="nav" id="prev" aria-label="previous">‹</button>
+    <div class="dots" id="dots"></div>
+    <button class="nav" id="next" aria-label="next">›</button>
+  </div>
+</div>
+
+<script>
+/* ====== EDIT HERE: add or change highlighted works ====== */
+const CARDS = [
+  {
+    badge: "AAAI 2021 · CCF-A",
+    topic: { en: "Feature Interaction", zh: "特征交互" },
+    title: "Detecting Beneficial Feature Interactions for Recommender Systems",
+    authors: "Yixin Su, Rui Zhang, Sarah Erfani*, Zhenghua Xu*",
+    summary: {
+      en: "Not every feature combination helps a recommender. SIGN uses a graph neural network to automatically detect the beneficial feature interactions — lifting both accuracy and interpretability.",
+      zh: "并非每种特征组合都对推荐有益。SIGN 用图神经网络自动识别真正有益的特征交互，同时提升精度与可解释性。"
+    },
+    note: {
+      en: "Adopted into Baidu's PaddleRec model library.",
+      zh: "已被百度 PaddleRec 模型库收录。"
+    },
+    links: [
+      { label: "paper", url: "https://arxiv.org/abs/2008.00404" },
+      { label: "code", url: "https://github.com/ruizhang-ai/SIGN-Detecting-Beneficial-Feature-Interactions-for-Recommender-Systems" },
+      { label: "PaddleRec", url: "https://github.com/PaddlePaddle/PaddleRec/tree/master/models/rank/sign" }
+    ]
+  },
+  {
+    badge: "ACM TOIS 2025 · CCF-A",
+    topic: { en: "Recommender Systems", zh: "推荐系统" },
+    title: "IEDR: A Context-aware Intrinsic and Extrinsic Disentangled Recommender System",
+    authors: "Yixin Su#, Wei Jiang#, Fangquan Lin, Cheng Yang, Sarah Erfani, Junhao Gan, Yunxiang Zhao*, Ruixuan Li, Rui Zhang*",
+    summary: {
+      en: "User choices blend stable taste with passing context. IEDR disentangles these intrinsic and extrinsic factors, making context-aware recommendation more accurate and more explainable.",
+      zh: "用户选择既含稳定偏好、也含随情境而变的因素。IEDR 将内在与外在因素解耦，让情境感知推荐更准、更可解释。"
+    },
+    note: null,
+    links: []
+  },
+  {
+    badge: "Nature Machine Intelligence 2025 · IF 26.4",
+    topic: { en: "AI × Bio-Medicine", zh: "医工交叉" },
+    title: "A Unified Deep Framework for Peptide–MHC–T Cell Receptor Binding Prediction",
+    authors: "Yunxiang Zhao#, Jijun Yu#, Yixin Su#, You Shu#, Enhao Ma#, Jing Wang, Zhen Huang*, Gong Cheng*, Hongguang Ren*, Jiannan Feng*",
+    summary: {
+      en: "How peptides, MHC and T-cell receptors bind is central to immunotherapy and vaccine design. This unified deep framework models all three together, published in Nature Machine Intelligence.",
+      zh: "多肽、MHC 与 T 细胞受体如何结合，是免疫治疗与疫苗设计的核心问题。该统一深度框架将三者联合建模，发表于 Nature Machine Intelligence。"
+    },
+    note: null,
+    links: [
+      { label: "paper & code", url: "https://www.nature.com/articles/s42256-025-01002-0" }
+    ]
+  }
+];
+/* ======================================================= */
+
+const I18N = {
+  en: { eyebrow: "Research Highlights", langBtn: "中文" },
+  zh: { eyebrow: "研究亮点", langBtn: "EN" }
+};
+
+let lang = "en";
+let i = 0;
+let busy = false;
+
+const card = document.getElementById("card");
+const dotsEl = document.getElementById("dots");
+
+function render(n){
+  const c = CARDS[n];
+  const links = (c.links || []).map(l =>
+    `<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join("");
+  const note = c.note ? `<div class="note">${c.note[lang]}</div>` : "";
+  card.innerHTML = `
+    <div class="meta">
+      <span class="badge">${c.badge}</span>
+      <span class="topic">${c.topic[lang]}</span>
+      <span class="idx">${String(n+1).padStart(2,"0")} / ${String(CARDS.length).padStart(2,"0")}</span>
+    </div>
+    <h3 class="title">${c.title}</h3>
+    <p class="summary">${c.summary[lang]}</p>
+    <p class="authors">${c.authors}</p>
+    ${note}
+    <div class="links">${links}</div>`;
+  [...dotsEl.children].forEach((d,k)=>d.classList.toggle("on",k===n));
+}
+
+function go(n, dir){
+  if(busy) return;
+  n = (n + CARDS.length) % CARDS.length;
+  if(n === i) return;
+  busy = true;
+  card.style.transition = "transform .2s ease, opacity .2s ease";
+  card.style.transform = `rotateY(${dir>0 ? -85 : 85}deg)`;
+  card.style.opacity = "0";
+  setTimeout(()=>{
+    i = n; render(i);
+    card.style.transition = "none";
+    card.style.transform = `rotateY(${dir>0 ? 85 : -85}deg)`;
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      card.style.transition = "transform .24s ease, opacity .24s ease";
+      card.style.transform = "rotateY(0deg)";
+      card.style.opacity = "1";
+      setTimeout(()=>{ busy = false; }, 240);
+    }));
+  }, 200);
+}
+
+// dots
+CARDS.forEach((_,k)=>{
+  const b = document.createElement("button");
+  b.className = "dot"; b.setAttribute("aria-label","slide "+(k+1));
+  b.onclick = ()=>go(k, k>i?1:-1);
+  dotsEl.appendChild(b);
+});
+
+document.getElementById("next").onclick = ()=>go(i+1, 1);
+document.getElementById("prev").onclick = ()=>go(i-1, -1);
+document.addEventListener("keydown", e=>{
+  if(e.key==="ArrowRight") go(i+1,1);
+  if(e.key==="ArrowLeft") go(i-1,-1);
+});
+document.getElementById("lang").onclick = ()=>{
+  lang = lang==="en" ? "zh" : "en";
+  document.documentElement.lang = lang;
+  document.getElementById("lang").textContent = I18N[lang].langBtn;
+  document.querySelector('[data-i18n="eyebrow"]').textContent = I18N[lang].eyebrow;
+  render(i);
+};
+
+render(0);
+</script>
+</body>
+</html>

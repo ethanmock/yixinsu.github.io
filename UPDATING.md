@@ -117,15 +117,39 @@
 | `accent` | 主题强调色 | `#7a1f2b`(酒红) / `#1a3a5c`(藏蓝, 当前) / `#2f5d4f`(墨绿) / `#333333`(近黑)，或任意十六进制色 |
 | `defaultLang` | 打开页面时的默认语言 | `"en"` 或 `"zh"` |
 | `showResearchDemo` | 是否显示 "Research / Live demo" 整个区块 | `true` / `false` |
-| `demoUrl` | 交互 demo 页面地址；非空即在该区嵌入 iframe，空字符串则显示占位 | 见第 5 节 |
+| `demoUrl` | Research 区嵌入的页面地址；当前是 `demo.html`（研究亮点卡片） | 见第 5 节 |
 
 改完同样：`python3 scripts/build.py` → 提交。
 
 ---
 
-## 5. **Demo 更新方法**（重点）
+## 5. **Research 亮点 / Demo**（重点）
 
-主页 "Research" 区预留了一个交互 demo 接口。逻辑很简单：**`demoUrl` 一旦非空，该区就把它当作网页用 `<iframe>` 嵌进来**；为空时显示 "Demo slot" 占位。
+主页 "Research" 区通过 `<iframe>` 嵌入 `data/config.json` 里 `demoUrl` 指向的页面：**`demoUrl` 非空就把它当作网页嵌进来**；为空则显示占位。
+
+### 5.1 当前内容：研究亮点卡片 `demo.html`
+
+现在 `demoUrl` 指向 `demo.html`——一个**可翻页的"研究亮点"卡片**（中英双语、左右翻页、每张一句话通俗解读 + 链接），目的是让访客 30 秒看懂代表工作。
+
+**加/改/删亮点卡片** = 编辑 `demo.html` 顶部的 `CARDS` 数组，每张卡片：
+```js
+{
+  badge: "AAAI 2021 · CCF-A",              // 会场 · 徽章
+  topic: { en: "Feature Interaction", zh: "特征交互" },
+  title: "Detecting Beneficial Feature Interactions for Recommender Systems",
+  authors: "Yixin Su, Rui Zhang, Sarah Erfani*, Zhenghua Xu*",
+  summary: { en: "一句话英文解读", zh: "一句话中文解读" },
+  note: { en: "亮点/收录说明(可选)", zh: "..." },   // 无则写 null
+  links: [ { label: "paper", url: "https://..." } ]  // 无则写 []
+}
+```
+> `demo.html` 是独立文件，改完**无需**跑 `build.py`，直接 `git commit && git push` 即可（`build.py` 只负责把 `demoUrl` 这个地址写进主页，不碰 demo 内容）。改完想本地看：`python3 -m http.server 4599` 然后开 `http://localhost:4599/demo.html`。
+
+如果之后想改标题"Research Highlights / 研究亮点"这行小标题文案，它在 `index.html` 模板的 `research:` 文案块里（中英各一处）。
+
+### 5.2 换成别的 demo（比如某篇论文的交互可视化）
+
+若将来做了真正可跑的交互 demo，把它做成独立页面替换即可。逻辑很简单：**`demoUrl` 一旦非空，该区就把它当作网页用 `<iframe>` 嵌进来**；为空时显示占位。
 
 ### 步骤
 
