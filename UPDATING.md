@@ -1,6 +1,6 @@
 # 维护指南 · Updating this site
 
-个人主页托管在 GitHub Pages（`main` 分支根目录的 `index.html`），自定义域名 `yixinsu.github.io`（见 `CNAME`）。
+个人主页托管在 GitHub Pages（`main` 分支根目录的 `index.html`）。仓库为用户主站 `ethanmock.github.io`，线上地址 `https://ethanmock.github.io/`。
 
 ## 目录结构
 
