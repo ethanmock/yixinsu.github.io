@@ -147,6 +147,8 @@
 ```
 
 **给某篇配真实论文图**：把图片（框架图/teaser）放到 `assets/highlights/`（如 `assets/highlights/sign.png`），再把该卡片的 `image` 设成 `"assets/highlights/sign.png"` 即可（会自动替换主题矢量图）。桌面端图在左、文字在右；手机端自动只显示文字。
+> **点卡片会跳到主页发表列表里对应的论文并高亮**——靠"卡片 `title` 与 `data/publications.json` 里该论文 `title` 完全一致"来定位。所以改卡片标题时，务必和发表列表里的标题保持一字不差（否则跳转会失效）。
+>
 > `demo.html` 是独立文件，改完**无需**跑 `build.py`，直接 `git commit && git push` 即可（`build.py` 只负责把 `demoUrl` 这个地址写进主页，不碰 demo 内容）。改完想本地看：`python3 -m http.server 4599` 然后开 `http://localhost:4599/demo.html`。
 
 如果之后想改标题"Research Highlights / 研究亮点"这行小标题文案，它在 `index.html` 模板的 `research:` 文案块里（中英各一处）。

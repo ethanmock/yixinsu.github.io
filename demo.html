@@ -62,6 +62,11 @@
   .links a{font-size:12.5px; color:var(--accent); text-decoration:none; border:1px solid #dde4ec;
     background:#f7f9fb; border-radius:999px; padding:5px 12px; display:inline-flex; align-items:center; gap:6px}
   .links a:hover{background:var(--accent); color:#fff; border-color:var(--accent)}
+  .card{cursor:pointer}
+  .card:hover{border-color:#c7d2df}
+  .seeall{align-self:flex-start; margin-top:2px; font:inherit; font-size:12px; color:var(--muted);
+    background:none; border:none; padding:0; cursor:pointer; text-decoration:underline; text-underline-offset:3px}
+  .seeall:hover{color:var(--accent)}
 
   .controls{display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px}
   .nav{width:36px; height:36px; border-radius:999px; border:1px solid var(--line); background:var(--paper);
@@ -123,7 +128,7 @@ const CARDS = [
     note: null,
     image: "",
     art: "rec",
-    links: []
+    links: [ { label: "paper", url: "https://arxiv.org/abs/2503.03524" } ]
   },
   {
     badge: "Nature Machine Intelligence 2025 · IF 26.4",
@@ -178,7 +183,10 @@ const ART = {
     <path d="M20 96 q40 -14 80 0 t80 0" fill="none" stroke="#c3ccd6" stroke-width="1.6"/></svg>`
 };
 
-const I18N = { en:{eyebrow:"Research Highlights",langBtn:"中文"}, zh:{eyebrow:"研究亮点",langBtn:"EN"} };
+const I18N = {
+  en:{eyebrow:"Research Highlights",langBtn:"中文",seeAll:"See this paper in the full list ↓"},
+  zh:{eyebrow:"研究亮点",langBtn:"EN",seeAll:"在下方完整列表中查看 ↓"}
+};
 
 let lang="en", i=0, busy=false;
 const card=document.getElementById("card"), dotsEl=document.getElementById("dots");
@@ -204,6 +212,7 @@ function render(n){
       <p class="authors">${c.authors}</p>
       ${note}
       <div class="links">${links}</div>
+      <button class="seeall" type="button">${I18N[lang].seeAll}</button>
     </div>`;
   [...dotsEl.children].forEach((d,k)=>d.classList.toggle("on",k===n));
 }
@@ -237,6 +246,31 @@ document.getElementById("lang").onclick=()=>{
   document.querySelector('[data-i18n="eyebrow"]').textContent=I18N[lang].eyebrow;
   render(i);
 };
+
+// Clicking a card jumps to that paper in the site's Publications list (same-origin parent).
+function goToPub(title){
+  try{
+    const doc=(window.top||window).document;
+    const pubs=doc.getElementById("pubs"); if(!pubs) return;               // standalone: no-op
+    const all=[...pubs.querySelectorAll("button")].find(b=>b.textContent.trim()==="All");
+    if(all) all.click();                                                   // clear any active filter so the paper is present
+    setTimeout(()=>{
+      const el=[...pubs.querySelectorAll("div")].find(d=>d.textContent.trim()===title);
+      if(!el) return;
+      const row=el.closest("li")||el;
+      const win=doc.defaultView;
+      const rect=row.getBoundingClientRect();
+      const y=rect.top+win.scrollY-Math.max(90,win.innerHeight/2-rect.height/2);
+      win.scrollTo({top:Math.max(0,y),behavior:"instant"});
+      const prev=row.style.background;
+      row.style.transition="background-color .5s";
+      row.style.background="rgba(26,58,92,.09)";
+      setTimeout(()=>{ row.style.background=prev||""; },1600);
+    },140);
+  }catch(e){}
+}
+card.addEventListener("click",e=>{ if(e.target.closest("a")) return; goToPub(CARDS[i].title); });
+
 render(0);
 </script>
 </body>

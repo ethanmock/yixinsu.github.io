@@ -7,7 +7,12 @@
     "badges": [
       "SCI Q1 · IF 8.1"
     ],
-    "links": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://www.cell.com/cell-reports/fulltext/S2211-1247(25)00986-6"
+      }
+    ],
     "topics": [
       "bio"
     ]
@@ -20,7 +25,12 @@
     "badges": [
       "CCF-A"
     ],
-    "links": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://arxiv.org/abs/2403.16137"
+      }
+    ],
     "topics": [
       "gnn",
       "llm"
@@ -34,7 +44,12 @@
     "badges": [
       "CCF-A"
     ],
-    "links": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://arxiv.org/abs/2503.03524"
+      }
+    ],
     "topics": [
       "rec"
     ]
@@ -65,7 +80,12 @@
     "badges": [
       "CCF-A"
     ],
-    "links": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/33348"
+      }
+    ],
     "topics": [
       "rec"
     ]
@@ -118,7 +138,12 @@
     "badges": [
       "CCF-A"
     ],
-    "links": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://ieeexplore.ieee.org/document/10064070/"
+      }
+    ],
     "topics": [
       "gnn"
     ]
@@ -129,7 +154,12 @@
     "authors": "Ziqiang Cui#, Yixin Su#, Fangquan Lin, Cheng Yang, Hanwei Zhang, Jihai Zhang",
     "venue": "IJCNN 2022",
     "badges": [],
-    "links": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://ieeexplore.ieee.org/document/9892008/"
+      }
+    ],
     "topics": [
       "rec"
     ]
@@ -228,7 +258,12 @@
     "authors": "Changliang Li, Yixin Su, Ji Qi, Min Xiao",
     "venue": "ICCC 2019",
     "badges": [],
-    "links": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-030-23407-2_9"
+      }
+    ],
     "topics": [
       "nlp"
     ]
@@ -239,7 +274,12 @@
     "authors": "Changliang Li, Yixin Su, Wenju Liu",
     "venue": "IJCNN 2018",
     "badges": [],
-    "links": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://ieeexplore.ieee.org/document/8489624"
+      }
+    ],
     "topics": [
       "nlp"
     ]
@@ -250,7 +290,12 @@
     "authors": "Yixin Su, Sheng-Uei Guan",
     "venue": "IJAEC 2016",
     "badges": [],
-    "links": [],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://www.igi-global.com/article/density-and-distance-based-knn-approach-to-classification/157331"
+      }
+    ],
     "topics": []
   }
 ]
