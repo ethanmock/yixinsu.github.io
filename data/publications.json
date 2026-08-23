@@ -1,5 +1,24 @@
 [
   {
+    "year": 2026,
+    "title": "VCoT-SQL: Enhancing Text-to-SQL Generation through Dual Chain-of-Thought Validation Training",
+    "authors": "Rui Zhang, Yujia Su, Ruixuan Li, Yuhua Li, Yixin Su",
+    "venue": "EMNLP 2026",
+    "badges": [
+      "CCF-B"
+    ],
+    "links": [
+      {
+        "label": "paper",
+        "url": "https://openreview.net/forum?id=GwEhbN13kS"
+      }
+    ],
+    "topics": [
+      "nlp",
+      "llm"
+    ]
+  },
+  {
     "year": 2025,
     "title": "EBAMP: An Efficient De Novo Broad-Spectrum Antimicrobial Peptide Discovery Framework",
     "authors": "Yunxiang Zhao#, Qian Li#, Mingyue Sun#, Yixin Su#, Xinxin Su#, Ling Jiang, Xinran Zhang, et al.",
