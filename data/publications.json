@@ -19,6 +19,19 @@
     ]
   },
   {
+    "year": 2026,
+    "title": "Bridging the Gap: Real-Time Cost Control for Autobidding",
+    "authors": "Bingzhe Wang, Bo Shen, Yuejia Dou, Qi Qi, Ruohan Qian, Changyuan Li, Xin Yuan, Bin Zou, Wen Yi, Zhi Guo, Shuanglong Li, Lin Liu, Yixuan Zhang, Yixin Su, Wenqiang Liu",
+    "venue": "SIGKDD 2026",
+    "badges": [
+      "CCF-A"
+    ],
+    "links": [],
+    "topics": [
+      "rec"
+    ]
+  },
+  {
     "year": 2025,
     "title": "EBAMP: An Efficient De Novo Broad-Spectrum Antimicrobial Peptide Discovery Framework",
     "authors": "Yunxiang Zhao#, Qian Li#, Mingyue Sun#, Yixin Su#, Xinxin Su#, Ling Jiang, Xinran Zhang, et al.",
